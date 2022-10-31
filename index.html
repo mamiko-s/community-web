@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Community Web</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <section>
+            <aside></aside>
+            <form method="get" action="#">
+                <input type="text" placeholder="Search for anything">
+                <button type="submit" id="sbtn"><i class="fas fa-search"></i></button>
+            </form>
+            <ul>
+                <li class="top-header"><a href="#">Register</a></li>
+                <li class="top-header"><a href="#">Login</a></li>
+            </ul>
+        </section>
+        <ul>
+            <li class="bottom-header">
+                <a href="#home" class="anchor">Home</a>
+            </li>
+            <li class="bottom-header">
+                <a href="#for-sale" class="anchor">For Sale</a>
+            </li>
+            <li class="bottom-header">
+                <a href="#housing">Housing</a>
+            </li>
+            <li class="bottom-header">
+                <a href="#faqs">FAQs</a>
+            </li>
+            <li class="bottom-header">
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- SIDE MENU -->
+    <div class="side-menu">
+        <aside>
+            <p>For Sale</p>
+            <ul>
+                <li><a href="#for-sale">Electronics</a></li>
+                <li><a href="#for-sale">Cars</a></li>
+                <li><a href="#for-sale">Books</a></li>
+                <li><a href="#for-sale">Furniture</a></li>
+                <li><a href="#for-sale">Clothes</a></li>
+            </ul>
+        </aside>
+        <aside>
+            <p>Housing</p>
+            <ul>
+                <li><a href="#housing">North Vancouver</a></li>
+                <li><a href="#housing">South Vancouver</a></li>
+                <li><a href="#housing">East Vancouver</a></li>
+                <li><a href="#housing">West Vancouver</a></li>
+                <li><a href="#housing">Downtown</a></li>
+            </ul>
+        </aside>
+
+        <div class="side-menu-button">SIDE MENU</div>
+    </div>
+
+    <div class="hide-contents"></div>
+
+    <div class="main-contents">
+
+        <!-- CONTENTS -->
+        <section id="home" class="main-top">
+            <aside>
+                <p>Find good products!</p>
+                <!-- <span>Need something, but not sure where to look? All the products here are still waiting for
+                    you!</span> -->
+            </aside>
+        </section>
+
+        <section id="for-sale" class="for-sale">
+            <h2>For Sale</h2>
+            <div>
+                <a href="#" class="electronics">
+                    <p>Electronics</p>
+                </a>
+                <a href="#" class="cars">
+                    <p>Cars</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" class="books">
+                    <p>Books</p>
+                </a>
+                <a href="#" class="furniture">
+                    <p>Furniture</p>
+                </a>
+                <a href="#" class="clothes">
+                    <p>Clothes</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="housing" class="housing">
+            <h2>Housing</h2>
+
+            <div>
+                <a href="#" class="downtown">
+                    <p>Downtown</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" class="north-van">
+                    <p>North Vancouver</p>
+                </a>
+                <a href="#" class="south-van">
+                    <p>South Vancouver</p>
+                </a>
+                <a href="#" class="west-van">
+                    <p>West Vancouver</p>
+                </a>
+                <a href="#" class="east-van">
+                    <p>East Vancouver</p>
+                </a>
+            </div>
+
+        </section>
+
+        <section id="faqs" class="faqs">
+            <h2>FAQs</h2>
+            <article>
+                <button class="accordion">How to use coupons?</button>
+                <div class="panel">
+                    <p>
+                        When you are purchasing an item, coupons are automatically applied. If you have more than one
+                        eligible coupon, tap
+                        “Coupons” on the checkout screen to select which one you want to apply.
+                    </p>
+                </div>
+
+                <button class="accordion">What if I can't return an item on time?</button>
+                <div class="panel">
+                    <p>
+                        If your return is not in transit within the required time frame, the transaction will be
+                        completed
+                        and payment will be
+                        released to your seller.
+                        If you are having any trouble returning an item, please contact us immediately.
+                    </p>
+                </div>
+
+                <button class="accordion">What if a cancelled transaction is delivered?</button>
+                <div class="panel">
+                    <p>
+                        Sometimes tracking will stop updating while the order is still on its way to the buyer. When
+                        this happens the
+                        transaction may be cancelled before it's delivered to the buyer.
+                    </p>
+                </div>
+
+                <button class="accordion">What if the item is damaged or not as described?</button>
+                <div class="panel">
+                    <p>
+                        Upon receipt of the item(s), Buyer can refuse the order if it is damaged or not as described.
+                        Buyer remains responsible
+                        for the initial delivery cost. The item will be returned to the Seller immediately and Seller
+                        may be responsible for
+                        return delivery fees.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="name" name="name" id="name" placeholder="Name" />
+                <input type="email" name="email" id="email" placeholder="Email" />
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <button type="submit" id="send">Send message</button>
+            </form>
+        </section>
+
+        <footer>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#for-sale">For Sale</a></li>
+                <li><a href="#housing">Housing</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>© Community Web - Vancouver. All rights reserved.</p>
+        </footer>
+
+
+    </div>
+</body>
+
+<script>
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</html>

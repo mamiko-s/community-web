@@ -1,0 +1,490 @@
+html {
+    scroll-padding-top: 140px;
+}
+
+body {
+    margin: 0;
+    font-family: "Avenir Next";
+}
+
+h2 {
+    font-size: 32px;
+}
+
+
+/* HEADER */
+
+.header {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #F5F5F5;
+    box-shadow: 0.5px 0.5px 8px #ccc;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 102;
+}
+
+.header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0 3rem;
+}
+
+.header section aside {
+    background-image: url(../img/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 90px;
+}
+
+.header form {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    padding: 5px 20px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    height: 2.8em;
+    width: 45%;
+    overflow: hidden;
+}
+
+.header form input[type="text"] {
+    border: none;
+    height: 2.3em;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+.header form input[type="text"]:focus {
+    outline: 0;
+}
+
+.header button[type="submit"] {
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 1.4em;
+    border: none;
+    background: none;
+    color: #3879D9;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -5px;
+    outline: none;
+}
+
+.header section ul {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.header ul {
+    display: flex;
+    justify-content: right;
+    column-gap: 5%;
+    align-items: center;
+    padding-right: 6%;
+}
+
+.header ul li {
+    list-style: none;
+}
+
+.header .top-header a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.header .bottom-header a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* SIDE NAVIGATION */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.side-menu p {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.side-menu ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul li {
+    padding: 0.3rem 0.5rem;
+    border-left: 3px solid #11C3AC;
+}
+
+.side-menu ul li:hover {
+    background-color: #eee;
+}
+
+.side-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.side-menu .side-menu-button {
+    position: absolute;
+    top: 240px;
+    left: 280px;
+    margin: 0;
+    padding: 1rem;
+    background-color: #11C3AC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 4px 4px 6px #bbb;
+    color: #fff;
+    font-size: 18px;
+    writing-mode: vertical-rl;
+}
+
+.side-menu .side-menu-button:hover {
+    cursor: pointer;
+}
+
+.hide-contents {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 998;
+}
+
+/* MAIN CONTENTS */
+
+.main-contents {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.main-top aside {
+    background-image: url("../img/main.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-top aside p {
+    font-size: 60px;
+    text-shadow: 3px 3px 6px #333;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 8%;
+}
+
+.for-sale,
+.housing,
+.faqs,
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8%;
+}
+
+.for-sale div,
+.housing div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5% 10% 0;
+}
+
+.for-sale a,
+.housing a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.for-sale a::before,
+.housing a::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.for-sale a:hover,
+.housing a:hover {
+    opacity: 0.7;
+}
+
+.for-sale p,
+.housing p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 4px 4px 4px #333;
+    z-index: 101;
+}
+
+.electronics,
+.cars,
+.books,
+.furniture,
+.clothes,
+.downtown {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.for-sale .electronics {
+    background-image: url(../img/electronics.jpg);
+    width: 47%;
+    height: 30vh;
+}
+
+.for-sale .cars {
+    background-image: url(../img/car.jpg);
+    width: 47%;
+    height: 30vh;
+}
+
+.for-sale .books {
+    background-image: url(../img/books.jpg);
+    width: 28%;
+    height: 30vh;
+}
+
+.for-sale .furniture {
+    background-image: url(../img/furniture.jpg);
+    width: 28%;
+    height: 30vh;
+}
+
+.for-sale .clothes {
+    background-image: url(../img/clothes.jpg);
+    width: 28%;
+    height: 30vh;
+}
+
+
+.housing p {
+    font-size: 20px;
+}
+
+.housing .downtown p {
+    font-size: 26px;
+}
+
+.housing .downtown {
+    background-image: url(../img/downtown.jpg);
+    background-position: right;
+    width: 100%;
+    height: 30vh;
+}
+
+.housing .north-van {
+    background-image: url(../img/north-van.jpg);
+    background-position: 70% 30%;
+    width: 22%;
+    height: 20vh;
+}
+
+.housing .south-van {
+    background-image: url(../img/south-van.jpg);
+    background-position: 40% 60%;
+    width: 22%;
+    height: 20vh;
+}
+
+.housing .west-van {
+    background-image: url(../img/west-van.jpg);
+    background-position: 50% 50%;
+    width: 22%;
+    height: 20vh;
+}
+
+.housing .east-van {
+    background-image: url(../img/east-van.jpg);
+    background-position: 60% 90%;
+    width: 22%;
+    height: 20vh;
+}
+
+.faqs article {
+    padding: 5% 10%;
+}
+
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #bbb;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+}
+
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+.contact {
+    padding: 5% 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    /* border: 1px solid #bbb; */
+    border-radius: 10px;
+    padding: 10% 12%;
+}
+
+.contact input {
+    height: 6vh;
+    padding-left: 5%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-size: 16px;
+}
+
+.contact textarea {
+    height: 15vh;
+    padding: 3% 0 0 5%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-size: 18px;
+}
+
+.contact button {
+    background-color: #11C3AC;
+    border: none;
+    box-shadow: 3px 3px 8px #ccc;
+    color: #fff;
+    border-radius: 8px;
+    height: 6vh;
+    width: 12vw;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.contact button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #11C3AC;
+    width: 100%;
+    height: 25vh;
+    padding: 5% 0 4%;
+}
+
+footer ul,
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20%;
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+footer div {
+    padding: 3% 40% 5%;
+}
+
+footer div a {
+    background-color: #fff;
+    color: #777;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer p {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
